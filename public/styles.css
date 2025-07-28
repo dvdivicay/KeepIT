@@ -54,3 +54,63 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 20px;
+  width: 300px;
+  margin: 16px auto;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.login h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
+  width: 100%;
+  background-color: #f5ba13;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1em;
+
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 1em;
+}

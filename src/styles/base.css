@@ -1,0 +1,66 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #eee;
+  padding: 0 16px;
+}
+
+/* Global buttons — neutral baseline only */
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: transparent; /* was yellow */
+  color: inherit; /* was white */
+  padding: 0; /* don't force pill padding */
+  border-radius: 0; /* no pill by default */
+}
+
+/* keep your focus ring */
+button:focus-visible,
+.toggle-left:focus-visible,
+.icon-btn:focus-visible,
+.center form button:focus-visible {
+  outline: 3px solid #ffcc33;
+  outline-offset: 2px;
+}
+
+/* Login (if used) */
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 20px;
+  width: 300px;
+  margin: 16px auto;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.login .login-form button {
+  width: 100%;
+}
+.login h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}

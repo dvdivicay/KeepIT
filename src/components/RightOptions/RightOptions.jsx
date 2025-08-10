@@ -1,4 +1,5 @@
 import React from "react";
+import "./right-options.css";
 
 export default function RightOptions() {
   return (

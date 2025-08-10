@@ -1,0 +1,71 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+.brand .logo {
+  width: 28px;
+  height: 28px;
+}
+.brand-name {
+  font-family: "McLaren", cursive;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.header-actions {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #6b4a00;
+  border-radius: 999px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.15s, background 0.15s;
+}
+.header-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+.header-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+}
+.header-btn:active {
+  transform: translateY(0);
+}
+.header-btn.new-note {
+  background: #fffdfa;
+}
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff7d6;
+  color: #6b4a00;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .header-btn .btn-text {
+    display: none;
+  }
+}

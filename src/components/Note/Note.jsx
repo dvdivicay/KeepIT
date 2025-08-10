@@ -1,4 +1,5 @@
 import React from "react";
+import "./note.css";
 
 function Note({ id, title, content, onDelete }) {
   return (

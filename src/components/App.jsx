@@ -1,17 +1,12 @@
 import React from "react";
 import Header from "./Header";
-import Footer from "./Footer";
-import Main from "./Main";
+import Main from "./Main.jsx";
 
-var isLoggedIn = true; // Change this to true to simulate a logged-in user
-
-function App() {
+export default function App() {
   return (
-    <div className="app">
+    <>
       <Header />
       <Main />
-    </div>
+    </>
   );
 }
-
-export default App;

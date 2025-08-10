@@ -1,0 +1,163 @@
+.sidebar.left {
+  padding-top: 8px;
+}
+
+/* top bar + count */
+.left-topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.toggle-left {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 12px;
+  min-width: 36px;
+  min-height: 36px;
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, #f5ba13, #ffcc33);
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(245, 186, 19, 0.3);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.toggle-left:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(245, 186, 19, 0.4);
+}
+.toggle-left:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(245, 186, 19, 0.3);
+}
+.count-badge {
+  background: #f0f0f0;
+  color: #555;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* search (always visible) */
+.sidebar-search {
+  position: relative;
+  margin: 8px 12px 12px;
+}
+.sidebar-search.sticky {
+  position: sticky;
+  top: 8px;
+  z-index: 1;
+  background: #fff;
+  padding-bottom: 8px;
+}
+.sidebar-search .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: #888;
+}
+.sidebar-search input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.sidebar-search input:focus {
+  border-color: #f5ba13;
+  box-shadow: 0 0 0 2px rgba(245, 186, 19, 0.3);
+}
+
+/* list (only thing that collapses) */
+.preview-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: calc(100vh - 220px);
+  overflow: auto;
+  padding: 0 12px 12px;
+  transition: opacity 0.18s, max-height 0.18s;
+}
+.preview-list.collapsed {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* items */
+.preview-item {
+  position: relative;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px 36px 10px 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: border-color 160ms, box-shadow 160ms, background 160ms;
+}
+.preview-item:hover {
+  border-color: #f5ba13;
+  box-shadow: 0 2px 8px rgba(245, 186, 19, 0.18);
+  background: #fffdf5;
+}
+.preview-item.active {
+  border-color: #f5ba13;
+  box-shadow: 0 2px 10px rgba(245, 186, 19, 0.28);
+  background: #fff9e6;
+}
+.preview-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.preview-snippet {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* trash icon button */
+.icon-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.12s, background 0.15s;
+}
+.icon-btn .icon {
+  width: 16px;
+  height: 16px;
+  fill: #8a8a8a;
+  transition: fill 0.15s;
+}
+.icon-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  background: #fffdfa;
+}
+.icon-btn.delete:hover .icon {
+  fill: #e53935;
+}
+.icon-btn:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,125 @@
+/* ====== Form card ====== */
+.center form {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+.center form input,
+.center form textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: 1.1em;
+  font-family: inherit;
+  resize: none;
+}
+
+.center form textarea {
+  height: 500px;
+  line-height: 1.5;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  padding: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+/* Floating save/add FAB */
+.center form button {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  background: linear-gradient(135deg, #f5ba13, #ffcc33);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  outline: none;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+}
+.center form button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 12px rgba(245, 186, 19, 0.5);
+}
+
+/* ====== Top bar (mode + exit) ====== */
+.form-topbar {
+  position: absolute;
+  top: -12px; /* lift above the card */
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none; /* don't block the form below */
+  z-index: 1;
+}
+
+/* Re-enable pointer events on the controls themselves */
+.form-topbar .mode-chip,
+.form-topbar .exit-edit-btn {
+  pointer-events: auto;
+}
+
+/* Mode chip */
+.mode-chip {
+  background: #fff;
+  color: #555;
+  border: 1px solid #eee;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Professional ghost pill for Exit */
+.exit-edit-btn {
+  position: static !important; /* kill any old absolute rule */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #555;
+  border: 1px solid #eee;
+  padding: 6px 10px;
+  border-radius: 999px;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s,
+    transform 0.1s, color 0.15s;
+}
+.exit-edit-btn .icon {
+  width: 16px;
+  height: 16px;
+  color: #888;
+  display: block;
+}
+.exit-edit-btn:hover {
+  background: #fffdfa;
+  border-color: #f5d46b;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  color: #333;
+}
+
+/* Compact on very small screens */
+@media (max-width: 520px) {
+  .exit-edit-btn .text {
+    display: none;
+  } /* icon-only */
+}

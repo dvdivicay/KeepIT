@@ -1,10 +1,18 @@
-import React from 'react';
+import React from "react";
 
-function Note(props) {
+function Note({ id, title, content, onDelete }) {
   return (
     <div className="note">
-      <h1>{props.title}</h1>
-      <p>{props.content}</p>
+      <button
+        className="delete-btn"
+        aria-label="Delete note"
+        title="Delete"
+        onClick={() => onDelete(id)}
+      >
+        ✕
+      </button>
+      <h1>{title}</h1>
+      <p>{content}</p>
     </div>
   );
 }

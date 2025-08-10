@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function Input(props) {
-  return (
-      <input type={props.type} placeholder={props.placeholder} />
-  );
+  return <input {...props} />;
 }
 
 export default Input;

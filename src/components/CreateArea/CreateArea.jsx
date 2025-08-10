@@ -27,7 +27,6 @@ export default function CreateArea({
 
   return (
     <form onSubmit={handleSubmit}>
-      {/* ---- topbar: mode + exit ---- */}
       <div className="form-topbar">
         <div className="mode-chip">{note.id ? "Editing" : "New note"}</div>
       </div>
@@ -45,6 +44,30 @@ export default function CreateArea({
         onChange={handleChange}
         rows={10}
       />
+
+      {/* Exit editing – icon only, appears only when editing */}
+      {note.id && (
+        <button
+          type="button"
+          className="exit-fab"
+          onClick={onCancelEdit}
+          aria-label="Exit editing"
+          title="Exit editing"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            {/* simple X icon */}
+            <path
+              d="M6 6l12 12M18 6L6 18"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+        </button>
+      )}
+
+      {/* Submit FAB (add/save) */}
       <button type="submit" aria-label={note.id ? "Save changes" : "Add note"}>
         {note.id ? "✓" : "+"}
       </button>

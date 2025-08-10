@@ -291,17 +291,55 @@ form button:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.mini-delete {
+
+/* Generic small icon button */
+.icon-btn {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 24px;
-  height: 24px;
+  top: 6px;
+  right: 6px;
+  width: 28px;
+  height: 28px;
   border: none;
-  border-radius: 50%;
-  background: #ff5a5f;
-  color: #fff;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.12s ease, background 0.15s ease;
+}
+
+.icon-btn .icon {
+  width: 16px;
+  height: 16px;
+  fill: #8a8a8a; /* neutral */
+  transition: fill 0.15s ease;
+}
+
+.icon-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  background: #fffdfa;
+}
+
+.icon-btn.delete:hover .icon {
+  fill: #e53935;
+} /* professional red on hover */
+.icon-btn:active {
+  transform: translateY(0);
+}
+
+/* Focus ring (a11y) */
+.icon-btn:focus-visible {
+  outline: 3px solid #ffcc33;
+  outline-offset: 2px;
+}
+
+/* If you had the old class lying around, make sure it doesn't leak */
+.mini-delete {
+  display: none;
 }
 
 /* Center column container */
